@@ -3,6 +3,9 @@ package com.futurex.services.FutureXUserApp;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.math.BigInteger;
+import java.util.List;
 
-public class UserRepository extends JpaRepository<User, BigInteger> {
+public interface UserRepository extends JpaRepository<User, BigInteger> {
+
+    List<User> findByuserid(BigInteger id);
 }
